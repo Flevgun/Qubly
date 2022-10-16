@@ -281,9 +281,11 @@ section.information .right_info {
   section.information .right_info > .descr {
     color: #8989A2;
     font-size: 16px; }
+  section.information .right_info > .notif > p {
+    padding-left: 5px; }
 
 #reviews {
-  padding: 300px;
+  padding: 200px 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -428,7 +430,6 @@ section.information .right_info {
         border-color: #8e58da; }
     #pre_footer .form_wrapper > form > .or {
       margin: 20px auto 15px;
-      color: #fff;
       text-transform: uppercase; }
     #pre_footer .form_wrapper > form > a {
       display: block;
@@ -492,12 +493,13 @@ section.information .right_info {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        -webkit-transition: -webkit-transform 0.4s ease;
-        transition: -webkit-transform 0.4s ease;
-        transition: transform 0.4s ease;
-        transition: transform 0.4s ease, -webkit-transform 0.4s ease;
         text-decoration: none; }
-        #footer .logo_info > .social > li > a:hover {
+        #footer .logo_info > .social > li > a > img {
+          -webkit-transition: -webkit-transform 0.4s ease;
+          transition: -webkit-transform 0.4s ease;
+          transition: transform 0.4s ease;
+          transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
+        #footer .logo_info > .social > li > a:hover > img {
           -webkit-transform: translateY(-8px);
                   transform: translateY(-8px); }
         #footer .logo_info > .social > li > a > img {
@@ -590,3 +592,27 @@ section.information .right_info {
     font-weight: 900;
     padding-bottom: 15px;
     margin-top: 66px; }
+
+.hamburger {
+  display: none;
+  position: relative;
+  right: 15px;
+  top: 0; }
+  .hamburger .line {
+    width: 24px;
+    height: 3px;
+    background-color: #111;
+    display: block;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .hamburger:hover {
+    cursor: pointer; }
+  .hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(9px) rotate(45deg);
+            transform: translateY(9px) rotate(45deg); }
+  .hamburger.is-active .line:nth-child(2) {
+    opacity: 0; }
+  .hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+            transform: translateY(-9px) rotate(-45deg); }
